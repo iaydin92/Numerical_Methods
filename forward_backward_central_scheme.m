@@ -6,8 +6,7 @@ for k=1:length(dx)
     %backward difference scheme 
     dudx_b(k) = (x0^3-x0^2-(x0-dx(k))^3+(x0-dx(k))^2)/dx(k);
     %central difference scheme 
-    dudx_c(k) = ((x0+dx(k))^3-(x0+dx(k))^2 ...
-        -(x0-dx(k))^3+(x0-dx(k))^2)/(2*dx(k));
+    dudx_c(k) = ((x0+dx(k))^3-(x0+dx(k))^2-(x0-dx(k))^3+(x0-dx(k))^2)/(2*dx(k));
 end
 
 %%plot results 
